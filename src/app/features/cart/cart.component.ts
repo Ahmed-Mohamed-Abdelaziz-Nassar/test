@@ -17,7 +17,8 @@ export class CartComponent implements OnInit {
   _id: '',
   products: [],
   totalCartPrice: 0,
-} as Cart);
+} as unknown as Cart);
+  
   ngOnInit(): void {
     if (isPlatformBrowser(this.pLATFORM_ID)) {
       this.getCartData();
