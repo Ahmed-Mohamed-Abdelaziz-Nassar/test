@@ -13,8 +13,11 @@ export class CartComponent implements OnInit {
   private readonly cartService = inject(CartService);
   private readonly pLATFORM_ID = inject(PLATFORM_ID);
 
-  cartDetails = signal<Cart>({} as Cart);
-
+  cartDetails = signal<Cart>({
+  _id: '',
+  products: [],
+  totalCartPrice: 0,
+} as Cart);
   ngOnInit(): void {
     if (isPlatformBrowser(this.pLATFORM_ID)) {
       this.getCartData();
