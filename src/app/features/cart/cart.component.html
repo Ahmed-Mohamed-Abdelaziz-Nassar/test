@@ -10,12 +10,12 @@
       </div>
       <p class="text-gray-500 text-lg">
         You have
-        <span class="font-bold text-[#138D46]">{{ cartDetails().products.length ?? 0 }} items</span> in
+        <span class="font-bold text-[#138D46]">{{ cartDetails().products?.length ?? 0 }} items</span> in
         your cart
       </p>
     </div>
 
-    @if (cartDetails().products.length ?? 0 > 0) {
+    @if (cartDetails().products?.length ?? 0 > 0) {
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <!-- !---------------------- Left side  !---------------------- -->
         <div class="lg:col-span-8 flex flex-col gap-5">
